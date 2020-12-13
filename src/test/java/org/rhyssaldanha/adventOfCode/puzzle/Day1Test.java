@@ -1,4 +1,4 @@
-package org.rhyssaldanha;
+package org.rhyssaldanha.adventOfCode.puzzle;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;

@@ -1,4 +1,4 @@
-package org.rhyssaldanha.util;
+package org.rhyssaldanha.adventOfCode.util;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

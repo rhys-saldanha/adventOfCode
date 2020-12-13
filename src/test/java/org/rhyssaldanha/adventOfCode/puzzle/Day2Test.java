@@ -1,8 +1,8 @@
-package org.rhyssaldanha;
+package org.rhyssaldanha.adventOfCode.puzzle;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.rhyssaldanha.Day2.Line;
+import org.rhyssaldanha.adventOfCode.puzzle.Day2.Line;
 
 import java.util.List;
 

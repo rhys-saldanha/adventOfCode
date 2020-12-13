@@ -1,13 +1,12 @@
-package org.rhyssaldanha;
+package org.rhyssaldanha.adventOfCode.puzzle;
 
 import lombok.Value;
 import org.apache.commons.lang3.CharUtils;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class Day2 implements Day {
+public class Day2 implements Puzzle {
     private static final Pattern LINE_PATTERN = Pattern.compile("(?<lowerBound>\\d+)-(?<upperBound>\\d+)\\s(?<letter>\\w):\\s(?<word>\\w*)");
 
     @Override

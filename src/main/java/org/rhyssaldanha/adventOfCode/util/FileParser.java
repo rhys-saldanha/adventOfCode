@@ -1,4 +1,4 @@
-package org.rhyssaldanha.util;
+package org.rhyssaldanha.adventOfCode.util;
 
 import lombok.SneakyThrows;
 

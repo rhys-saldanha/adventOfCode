@@ -1,4 +1,4 @@
-package org.rhyssaldanha;
+package org.rhyssaldanha.adventOfCode.puzzle;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,7 @@ import lombok.experimental.FieldDefaults;
 
 import java.util.List;
 
-public class Day3 implements Day {
+public class Day3 implements Puzzle {
     private static final char TREE = '#';
 
     private final List<Slope> slopes = List.of(

@@ -1,10 +1,10 @@
-package org.rhyssaldanha;
+package org.rhyssaldanha.adventOfCode.puzzle;
 
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-public class Day1 implements Day {
+public class Day1 implements Puzzle {
     private static final Integer SUM_TARGET = 2020;
 
     @Override
