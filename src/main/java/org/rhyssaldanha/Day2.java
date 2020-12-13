@@ -1,6 +1,7 @@
 package org.rhyssaldanha;
 
 import lombok.Value;
+import org.apache.commons.lang3.CharUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
@@ -18,8 +19,10 @@ public class Day2 implements Day {
     }
 
     boolean isValidPassword(final Line line) {
-        final var matches = StringUtils.countMatches(line.getWord(), line.getLetter());
-        return (line.getLowerBound() <= matches) && (matches <= line.getUpperBound());
+        final var letter = CharUtils.toChar(line.getLetter());
+        final var firstChar = line.getWord().charAt(line.getFirstIndex() - 1);
+        final var secondChar = line.getWord().charAt(line.getSecondIndex()-1);
+        return (letter == firstChar) ^ (letter == secondChar);
     }
 
     Line parseLine(final String line) {
@@ -33,8 +36,8 @@ public class Day2 implements Day {
 
     @Value
     public static class Line {
-        Integer lowerBound;
-        Integer upperBound;
+        Integer firstIndex;
+        Integer secondIndex;
         String letter;
         String word;
     }

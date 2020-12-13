@@ -25,28 +25,24 @@ class Day2Test {
     void parseLine() {
         final Line line = day2.parseLine("1-3 a: abcde");
 
-        assertThat(line.getLowerBound(), is(1));
-        assertThat(line.getUpperBound(), is(3));
+        assertThat(line.getFirstIndex(), is(1));
+        assertThat(line.getSecondIndex(), is(3));
         assertThat(line.getLetter(), is("a"));
         assertThat(line.getWord(), is("abcde"));
     }
 
     @Test
-    void validPassword() {
-        assertTrue(day2.isValidPassword(new Line(1, 3, "a", "abcde")));
-    }
-
-    @Test
-    void invalidPasswords() {
+    void passwordValidity() {
         assertAll(
-                () -> assertFalse(day2.isValidPassword(new Line(1, 3, "a", "bcde"))),
-                () -> assertFalse(day2.isValidPassword(new Line(1, 3, "a", "aaaa")))
+                () -> assertTrue(day2.isValidPassword(new Line(1, 3, "a", "abcde"))),
+                () -> assertFalse(day2.isValidPassword(new Line(1, 3, "b", "cdefg"))),
+                () -> assertFalse(day2.isValidPassword(new Line(1, 3, "c", "ccccccccc")))
         );
     }
 
     @Test
     void countValidPasswords() {
         final var answer = day2.run(List.of("1-3 a: abcde", "1-3 b: cdefg", "2-9 c: ccccccccc"));
-        assertThat(answer, is("2"));
+        assertThat(answer, is("1"));
     }
 }
