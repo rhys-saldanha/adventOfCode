@@ -10,7 +10,13 @@ import java.util.List;
 public class Day3 implements Day {
     private static final char TREE = '#';
 
-    private final List<Slope> slopes = List.of(new Slope(3, 1));
+    private final List<Slope> slopes = List.of(
+            new Slope(1, 1),
+            new Slope(3, 1),
+            new Slope(5, 1),
+            new Slope(7, 1),
+            new Slope(1, 2)
+    );
 
     @Override
     public String run(final List<String> input) {

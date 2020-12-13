@@ -32,6 +32,6 @@ class Day3Test {
                 "#...##....#",
                 ".#..#...#.#"));
 
-        assertThat(answer, is("7"));
+        assertThat(answer, is("336"));
     }
 }
