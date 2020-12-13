@@ -6,8 +6,8 @@ import java.nio.file.Paths;
 import java.util.function.Supplier;
 
 public class Main {
-    private static final Supplier<Day> puzzle = Day2::new;
-    private static final String file = "day2.txt";
+    private static final Supplier<Day> puzzle = Day3::new;
+    private static final String file = "day3.txt";
 
     public static void main(String[] args) {
         final var lines = new FileParser().getLines(Paths.get("src", "main", "resources", file));
