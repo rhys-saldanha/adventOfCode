@@ -15,8 +15,10 @@ public class Day1 implements Day {
 
         for (final Integer x : numbers) {
             for (final Integer y : numbers) {
-                if (x + y == SUM_TARGET) {
-                    return String.valueOf(x * y);
+                for (final Integer z : numbers) {
+                    if (x + y + z == SUM_TARGET) {
+                        return String.valueOf(x * y * z);
+                    }
                 }
             }
         }
